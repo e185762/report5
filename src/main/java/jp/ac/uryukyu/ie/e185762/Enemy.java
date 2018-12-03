@@ -1,6 +1,8 @@
-public class Hero extends LivingThing{
+package jp.ac.uryukyu.ie.e185762;
 
-    public Hero(String name, int hitPoint, int attack) {
+public class Enemy extends LivingThing {
+
+    public Enemy (String name, int hitPoint, int attack) {
         super(name, hitPoint, attack);
     }
 
@@ -13,8 +15,9 @@ public class Hero extends LivingThing{
         setHitPoint(hitPoint);
         if (hitPoint < 0) {
             setDead(true);
-            System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
+            System.out.printf("モンスター%sは倒れた。\n", name);
         }
     }
+
 
 }

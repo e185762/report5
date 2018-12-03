@@ -1,3 +1,8 @@
+package jp.ac.uryukyu.ie.e185762;
+
+import jp.ac.uryukyu.ie.e185762.Enemy;
+import jp.ac.uryukyu.ie.e185762.Hero;
+
 public class Main {
     public static void main(String[] args){
         Hero hero = new Hero("勇者", 10, 5);
