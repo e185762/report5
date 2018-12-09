@@ -6,6 +6,12 @@ public class LivingThing {
     private int attack;
     boolean dead;
 
+    /**フィールド関数に変数の値をそれぞれセットするコンストラクタ。
+     *
+     * @param name　フィールド関数「name」に代入したい値。
+     * @param hitPoint　フィールド関数「hitPoint」に代入したい値。
+     * @param attack　フィールド関数「attack」に代入したい値。
+     */
     public LivingThing(String name, int hitPoint, int attack) {
         this.name = name;
         this.hitPoint = hitPoint;
@@ -51,6 +57,10 @@ public class LivingThing {
     }
 
 
+    /**ダメージ表記を出力するメソッド。
+     *
+     * @param opponent　変数「name」と対になるキャラクタの名前。
+     */
     public void attack(LivingThing opponent) {
         if (this.dead == false) {
             int damage = (int) (Math.random() * attack);
@@ -59,6 +69,10 @@ public class LivingThing {
         }
     }
 
+    /**ダメージ計算と死亡判定を行うメソッド。
+     *
+     * @param damage　ダメージの値。attack(LivingThing opponent)で算出した変数「damage」の値を代入する。
+     */
     public void wounded(int damage) {
         hitPoint -= damage;
         if (hitPoint < 0) {
